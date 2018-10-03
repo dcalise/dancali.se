@@ -1,0 +1,36 @@
+@import '../styles/sass/variables';
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid $gray-medium;
+  min-height: 8vh;
+  .header-logo {
+    p.subtitle {
+      font-size: 1.7rem;
+      margin-top: .5rem;
+      color: $gray-light;
+    }
+    a,
+    p {
+      font-size: 2rem;
+      line-height: 2rem;
+      margin: 0;
+    }
+  }
+  .header-mail-link {
+    color: $gray-light;
+  }
+}
+
+.header-navbar-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+    margin-left: 4rem;
+  }
+}

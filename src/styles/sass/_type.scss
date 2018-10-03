@@ -1,0 +1,19 @@
+body {
+  font-family: $font-family-base;
+  color: $gray-lighter;
+}
+
+a {
+  color: $yellow;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p,
+ul,
+li {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}

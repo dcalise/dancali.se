@@ -1,0 +1,22 @@
+@import './variables';
+@import '~flexboxgrid/css/flexboxgrid.css';
+@import './scaffolding';
+@import './type';
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+::selection {
+  background: #32464e;
+}
+
+body {
+  background: $gray-dark;
+  margin: 0;
+  padding: 0;
+}

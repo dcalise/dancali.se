@@ -1,10 +1,46 @@
-@import url(~flexboxgrid/css/flexboxgrid.css);
+section {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 15px; }
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto; }
+  @media (max-width: 1024px) {
+    .container {
+      max-width: 1024px; } }
+  @media (max-width: 768px) {
+    .container {
+      max-width: 768px; } }
+  @media (max-width: 480px) {
+    .container {
+      max-width: 480px; } }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px; }
+  .row .col {
+    width: 100%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    flex-basis: 0;
+    flex-grow: 1; }
+  .row .col-8 {
+    flex: 0 0 66.6667%;
+    max-width: 66.6667%; }
+
 body {
   font-family: "Menlo", "Monaco", "Courier New", "monospace";
   color: #d9d9d9; }
 
 a {
-  color: #ffc13b;
+  color: #FFC107;
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
@@ -14,6 +50,9 @@ ul,
 li {
   font-size: 2rem;
   line-height: 2.5rem; }
+
+.text-right {
+  text-align: right; }
 
 *, ::after, ::before {
   box-sizing: border-box; }

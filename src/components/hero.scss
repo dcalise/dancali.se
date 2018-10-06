@@ -1,8 +1,9 @@
 .hero {
-  display: flex;
   height: 92vh;
-  align-items: center;
-  justify-content: center;
+  min-height: 0;
+  @media (max-width: 767px) {
+    text-align: center;
+  }
   h1 {
     margin-top: 0;
     font-size: 3.5rem;

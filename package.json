@@ -6,8 +6,12 @@
     "flexboxgrid": "^6.3.1",
     "node-sass": "^4.9.3",
     "react": "^16.5.2",
+    "react-collapse": "^4.0.3",
     "react-dom": "^16.5.2",
+    "react-icons": "^3.1.0",
+    "react-motion": "^0.5.2",
     "react-scripts": "2.0.3",
+    "react-scrollable-anchor": "^0.6.1",
     "yarn-run-all": "^3.1.1"
   },
   "devDependencies": {

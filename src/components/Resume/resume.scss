@@ -1,0 +1,28 @@
+@import '../../styles/sass/variables';
+
+.resume {
+  header.section-header {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: $yellow;
+  }
+  p {
+    margin: 1.5rem 0;
+    line-height: 2.3rem;
+  }
+  .highlight {
+    color: $dark-blue;
+  }
+  ul li {
+    font-size: 1.7rem;
+  }
+  .row.clickable {
+    cursor: pointer;
+    &:hover {
+      background: #32464e;
+    }
+  }
+}

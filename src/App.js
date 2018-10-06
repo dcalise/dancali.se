@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Resume from './components/Resume';
 
 class App extends Component {
   render() {
@@ -11,6 +11,8 @@ class App extends Component {
         <Header />
 
         <Hero />
+
+        <Resume />
       </div>
     );
   }

@@ -1,10 +1,20 @@
 import React from 'react';
-import ScrollableAnchor from 'react-scrollable-anchor';
+import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
 import './resume.scss';
 import experience from './experience';
 import ExperienceRow from './components/ExperienceRow';
 
 class Resume extends React.PureComponent {
+
+  componentDidMount() {
+    const isMobile = window.innerWidth < 481;
+
+    if (isMobile) {
+      const headerHeight = document.getElementsByClassName('main-header')[0].clientHeight + 1;
+      configureAnchors({offset: -headerHeight});
+    }
+  }
+
   render() {
     return (
       <ScrollableAnchor id={'resume'}>

@@ -5,6 +5,9 @@ section {
   align-items: center;
   justify-content: center;
   padding: 15px; }
+  @media (max-width: 480px) {
+    section {
+      min-height: 87vh; } }
 
 .container {
   width: 100%;
@@ -75,3 +78,19 @@ body {
   background: #212121;
   margin: 0;
   padding: 0; }
+
+@media (max-width: 480px) {
+  .hidden-xs {
+    display: none; } }
+
+.visible-xs-block {
+  display: none !important; }
+  @media (max-width: 480px) {
+    .visible-xs-block {
+      display: block !important; } }
+
+.visible-xs-flex {
+  display: none !important; }
+  @media (max-width: 480px) {
+    .visible-xs-flex {
+      display: flex !important; } }

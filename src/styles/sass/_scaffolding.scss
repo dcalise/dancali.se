@@ -4,6 +4,9 @@ section {
   align-items: center;
   justify-content: center;
   padding: 15px;
+  @media (max-width: $screen-xs) {
+    min-height: 87vh;
+  }
 }
 
 .container {

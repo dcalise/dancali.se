@@ -7,8 +7,9 @@
   @media (max-width: $screen-sm) {
     height: 94vh;
   }
-  @media (max-width: 767px) {
-    text-align: center;
+  @media (max-width: $screen-xs) {
+    margin-top: 13vh;
+    height: 87vh;
   }
   h1 {
     margin-top: 0;

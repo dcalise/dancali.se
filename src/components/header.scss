@@ -1,11 +1,24 @@
 @import '../styles/sass/variables';
 
-header {
+header.main-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
   padding: 1.5rem;
   border-bottom: 1px solid $gray-medium;
   min-height: 8vh;
+  background: $gray-dark;
+  z-index: 200;
   @media (max-width: $screen-sm) {
     min-height: 6vh;
+  }
+  @media (max-width: $screen-xs) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 13vh;
+    flex-direction: column;
   }
   .container {
     display: flex;
@@ -18,13 +31,13 @@ header {
       margin-top: .5rem;
       color: $gray-light;
     }
-    span,
+    span.logo,
     p {
       font-size: 1.7rem;
       line-height: 1.7rem;
       margin: 0;
     }
-    span {
+    span.logo {
       color: $yellow;
     }
   }
@@ -46,6 +59,37 @@ header {
     @media (max-width: $screen-sm) {
       font-size: 1.7rem;
       margin-left: 3rem;
+    }
+  }
+}
+
+.mobile-menu-toggle {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0 .7rem;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 13vh;
+  left: 0;
+  right: 0;
+  background: $gray-dark;
+  list-style: none;
+  z-index: 100;
+  transform: translateY(-100%);
+  transition: transform ease-out 100ms;
+  .open & {
+    transition: transform ease-in 200ms;
+    transform: translateY(0)
+  }
+  li {
+    a {
+      display: block;
+      font-size: 1.7rem;
+      padding: 2rem 15px;
+      border-bottom: 1px solid $gray-medium;
     }
   }
 }

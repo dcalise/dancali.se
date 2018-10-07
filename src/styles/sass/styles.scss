@@ -20,3 +20,23 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.hidden-xs {
+  @media (max-width: $screen-xs) {
+    display: none;
+  }
+}
+
+.visible-xs-block {
+  display: none!important;
+  @media (max-width: $screen-xs) {
+    display: block!important;
+  }
+}
+
+.visible-xs-flex {
+  display: none!important;
+  @media (max-width: $screen-xs) {
+    display: flex!important;
+  }
+}

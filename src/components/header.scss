@@ -4,6 +4,9 @@ header {
   padding: 1.5rem;
   border-bottom: 1px solid $gray-medium;
   min-height: 8vh;
+  @media (max-width: $screen-sm) {
+    min-height: 6vh;
+  }
   .container {
     display: flex;
     justify-content: space-between;
@@ -11,14 +14,14 @@ header {
   }
   .header-logo {
     p.subtitle {
-      font-size: 1.7rem;
+      font-size: 1.5rem;
       margin-top: .5rem;
       color: $gray-light;
     }
     span,
     p {
-      font-size: 2rem;
-      line-height: 2rem;
+      font-size: 1.7rem;
+      line-height: 1.7rem;
       margin: 0;
     }
     span {
@@ -27,6 +30,9 @@ header {
   }
   .header-mail-link {
     color: $gray-light;
+    @media (max-width: $screen-sm) {
+      display: none;
+    }
   }
 }
 
@@ -37,5 +43,9 @@ header {
   li {
     list-style: none;
     margin-left: 4rem;
+    @media (max-width: $screen-sm) {
+      font-size: 1.7rem;
+      margin-left: 3rem;
+    }
   }
 }

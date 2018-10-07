@@ -21,3 +21,13 @@ li {
 .text-right {
   text-align: right;
 }
+
+.text-center {
+  text-align: center;
+}
+
+.text-left-sm {
+  @media (max-width: $screen-sm) {
+    text-align: left;
+  }
+}

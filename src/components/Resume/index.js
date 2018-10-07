@@ -25,14 +25,14 @@ class Resume extends React.PureComponent {
                 <header className="section-header">
                   Education
                 </header>
-                <div className="row">
+                <div className="row stack-sm">
                   <div className="col">
                     <p>
                       <span className="highlight">Bachelor of Fine Arts: Graphic Design</span><br/>
                       <i>New York Institute of Technology</i>
                     </p>
                   </div>
-                  <div className="col text-right">
+                  <div className="col text-right text-left-sm dates">
                     <p>May 2014</p>
                   </div>
                 </div>

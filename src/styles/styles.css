@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web");
 section {
   display: flex;
   min-height: 100vh;
@@ -53,6 +54,13 @@ li {
 
 .text-right {
   text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+@media (max-width: 768px) {
+  .text-left-sm {
+    text-align: left; } }
 
 *, ::after, ::before {
   box-sizing: border-box; }

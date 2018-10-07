@@ -8,21 +8,69 @@
     font-size: 2rem;
     font-weight: bold;
     color: $yellow;
+    @media (max-width: $screen-sm) {
+      font-size: 1.7rem;
+    }
   }
   p {
     margin: 1.5rem 0;
     line-height: 2.3rem;
+    @media (max-width: $screen-sm) {
+      font-size: 1.7rem;
+    }
   }
   .highlight {
     color: $dark-blue;
   }
   ul li {
     font-size: 1.7rem;
+    @media (max-width: $screen-sm) {
+      font-size: 1.5rem;
+    }
   }
   .row.clickable {
+    position: relative;
     cursor: pointer;
     &:hover {
-      background: #32464e;
+      border-radius: 50px;
+      background: rgba($highlight-color, .2);
+      .collapse-controls {
+        opacity: 1;
+      }
     }
+    .collapse-controls {
+      position: absolute;
+      left: -.5rem;
+      top: 50%;
+      opacity: 0;
+      background: $gray-dark;
+      border: 1px solid $gray-medium;
+      transition: opacity ease-out 100ms;
+      font-size: 1.48rem;
+      transform: translateY(-50%);
+      &.open {
+        opacity: 1;
+      }
+    }
+  }
+  .row.stack-sm {
+    @media (max-width: $screen-sm) {
+      flex-direction: column;
+      margin-bottom: 2rem;
+      .col {
+        max-width: none;
+        flex: 1;
+        p {
+          margin: .3rem 0;
+        }
+      }
+    }
+  }
+  .bullets {
+    margin-bottom: 70px;
+  }
+
+  .dates {
+    color: $gray-medium;
   }
 }

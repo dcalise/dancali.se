@@ -1,15 +1,15 @@
 import React from 'react';
 import { Collapse } from 'react-collapse';
-import { IoIosArrowDown, IoIosClose } from 'react-icons/io';
+import { IoMdAdd, IoMdRemove } from 'react-icons/io';
 
 const CollapseControls = (props) => {
   if (props.isOpened) {
     return (
-      <IoIosClose />
+      <IoMdRemove className="collapse-controls open" />
     )
   }
   return (
-    <IoIosArrowDown />
+    <IoMdAdd className="collapse-controls"/>
   )
 }
 
@@ -35,20 +35,21 @@ class ExperienceRow extends React.Component {
 
     return (
       <div>
-        <div className="row clickable" onClick={this.toggleCollapse}>
+        <div className="row clickable stack-sm" onClick={this.toggleCollapse}>
           <div className="col col-8">
             <p>
+              <CollapseControls isOpened={this.state.isOpened} />
               <span className="highlight">{company}</span> - <i>{title}</i>
             </p>
           </div>
-          <div className="col text-right">
-            <p>{fromDate} - {toDate || 'Present'} <CollapseControls isOpened={this.state.isOpened} /></p>
+          <div className="col text-right text-left-sm dates">
+            <p>{fromDate} - {toDate || 'Present'}</p>
           </div>
         </div>
         <Collapse isOpened={this.state.isOpened}>
           <div className="row">
             <div className="col">
-              <ul>
+              <ul className="bullets">
                 {bullets.map((text, index) => {
                   return <li key={index}>{text}</li>;
                 })}
